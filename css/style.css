@@ -1,23 +1,148 @@
-/* Styles for Mobile Site */
+/* Background */
+body {
+ 	 background-image: url("./css/swatch.png");
+	 background-color: #20ff20;
+}
 
 /* Header & Hero */
+#hero {
+/*
+	display: flex; 		
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+*/
+}
+#hero {
+	display: flex;
+	justify-content: center;
+}
 
 /* Projects */
+figure.project {
+		display: flex;
+	grid-template-columns: 2fr 1fr;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	margin-left: 1rem;
+	border: 4.5px solid black;
+}
+
+
+figcaption {
+	font-weight: bold;
+	font-family: serif;
+	font-size: 1.5rem;
+	color: #800080;	 
+}
 
 /* Reviews */
+div.review {
+	font-size: 90%; /* The computer shows the font bigger than intended so this line is intended to correct that. */
 
+}
+div.name {
+	color: #0000ff;
+	font-style: italic;
+	font-weight: bolder;
+}
+div.title { /* make the name stand out */
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+div.content {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 1rem;	
+}
+/* Part of the figure didn't come together so well but I think it looks good enough to me. */
+figure.review {
+	display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1rem;
+margin-left: 1rem;
+border: 3px solid #ffff00;
+}
 /* Footer */
 
+footer {
+	font-size: 90%; /* Make the font more similar for a mobile device because they generally have smaller resolutions */
+}
 
 /* Media state for Desktop site */
 @media (min-width: 1000px) {
 
     /* Header & Hero */
-
+	 #hero {
+	 	/*
+	 		display: flex; 		
+	 		margin-left: auto;
+	 		margin-right: auto;
+	 		width: 50%;
+	 */
+	 }
+	 #hero {
+	 		display: flex;
+	 		justify-content: center;
+	 }
+	 
     /* Projects */
+	 figure.project {
+			 display: flex;
+          grid-template-columns: 2fr 1fr;
+      	 justify-content: center;
+      	 align-items: center;
+      	 font-size: 1rem;
+      	 margin-left: 1rem;
+    	    border: 4.5px solid black;
+	 }
 
+	 figure.review {
+			 display: flex;
+      	 justify-content: center;
+      	 align-items: center;
+      	 font-size: 1rem;
+      	 margin-left: 1rem;
+    	    border: 3px solid #ffff00;
+	 }
+	 
+	 figcaption {
+	     font-weight: bold;
+	     font-family: serif;
+	     font-size: 1.5rem;
+	     color: #800080;	 
+	 }
+	 
     /* Reviews */
+	 div.review {
+		   font-size: 90%; /* The computer shows the font bigger than intended so this line is intended to correct that. */
 
+	}
+	div.name {
+			color: #0000ff;
+			font-style: italic;
+			font-weight: bolder;
+	}
+	div.title { /* make the name stand out */
+			font-size: 1.1rem;
+			font-weight: bold;
+	}
+	div.content {
+			font-family: sans-serif;
+			font-weight: normal;
+			font-size: 1rem;	
+	}
     /* Footer */
-
+	footer {
+		font-size: 75%;	/* Fonts are typically smaller for footers so I'm going to try to keep it that way. */
+	}	
+	
 }
+
+/*
+Sources:
+https://www.w3schools.com/cssref/pr_background-image.php -- find out about background images
+The CSS embedded design project -- I used it to figure (no pun intended) out how to implement the <figure> and <figcaption> items.
+*/
